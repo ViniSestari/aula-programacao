@@ -39,8 +39,50 @@
         </div>
       </div>
       </nav>
-    <h1>Hello, world!</h1>
+    <h1><u>Entre em Contato com a Gente:</u></h1>
+
+      <form action="salvar.php" method="post" enctype="multipart/form-data">
+
+     <label for="estado"></label>
+        <select id="estado" name="estado" class="form-control">
+          <option value="">Selecione seu Estado</option>
+          <option value="SP">São Paulo</option>
+          <option value="RJ">Rio de Janeiro</option>
+          <option value="MG">Minas Gerais</option>
+          <option value="RS">Rio Grande do Sul</option>
+          <option value="PR">Paraná</option>
+
+        <input type="checkbox" id="bicicleta" name="bicicleta" value="bike">
+        <label for="bicicleta">Eu tenho uma bicicleta</label><br>
+        <br><input type="checkbox" id="carro" name="carro" value="car">
+        <label for="carro">Eu tenho um carro</label><br>
+        <input type="radio" id="css" name="linguagem" value="css">
+        <label for="css">CSS</label><br>
+        <input type="radio" id="html" name="linguagem" value="html">
+        <label for="html">HTML</label><br>
+        <input type="radio" id="js" name="linguagem" value="js">
+        <label for="js">JavaScript</label><br>
+
+        <label for="nome" >Digite seu Nome:</label>
+          <input type="text"  placeholder="Nome" id="nome"  class="form-control">
+          <label for="data_nascimento"> Data de Nascimento:</label>
+          <input type="date" id="data_nascimento" class="form-control">
+          <label for="atendimento">Hora de Atendimento:</label>
+          <input type="time" id="atendimento" class="form-control">
+          <label for="email">Digite seu E-mail:</label>
+          <input type="email"  placeholder="E-mail" id="email" class="form-control">
+          <label for="telefone">Digite seu Telefone:</label>
+          <input type="tel"  placeholder="Telefone" id="telefone" class="form-control">
+          <label for="mensagem">Digite sua Mensagem:</label>
+          <textarea id="mensagem" class="form-control" placeholder="Mensagem"></textarea>
+          <label for="anexo">Anexar Arquivo:</label>
+          <input type="file" id="anexo" class="form-control">
+          </br>
+          <button type="submit" class="btn btn-primary">Enviar</button>
+          <button type="reset" class="btn btn-secondary">Limpar</button>
+      </form>
  
+      <br></br>
      <!-- Rodapé -->
      <footer style="background-color: #333; color: white; text-align: center; padding: 20px; margin-top: 30px;">
         &copy; BRAVVO. Todos os direitos reservados.
