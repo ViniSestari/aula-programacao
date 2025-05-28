@@ -4,8 +4,11 @@ body {
 }
 
  h2{
+    font-family: ;
     color: blueviolet;
+    font-size: 2.5rem;
     text-align: center;
+    letter-spacing: 1px;
 } 
 
 footer{
@@ -28,4 +31,8 @@ footer{
     color: white;
     font-size: 20px;
     text-align: center;
+}
+ nav {
+    background-color: rgb(255, 255, 255);
+   ;
 }
