@@ -40,6 +40,22 @@ footer{
     background-color: rgb(255, 255, 255);
    
 }
-
+h2 {
+    font-family: 'BlowBrush';
+    src: url('./fonts/blowbrush.ttf') format('truetype') ;
+    color: blueviolet;
+    text-align: center;
+}
+p {
+    color: #ffffff;
+    text-align: center;
+    font-size: 20px;
+}
+.blog{
+    font-family: 'BlowBrush';
+    src: url('./fonts/blowbrush.ttf') format('truetype') ;
+  text-align: center;
+  color: blueviolet;
+}
   
   
