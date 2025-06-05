@@ -3,145 +3,165 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Contato</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <title>Contato | BRAVVO</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   </head>
 
-  <body>
     <style>
+      body {
+        background-color: #000;
+        color: blueviolet;
+      }
+      header {
+        background-color: #000;
+        color: blueviolet;
+        padding: 80px;
+        text-align: center;
+      }
       a i {
-  font-size: 50px;
-  color: blueviolet;
-  margin: 0 10px;
-  transition: 0.3s;
-}
-
-a i:hover {
-  color: #C13584; 
-}
-body {
-  background-color: rgb(0, 0, 0);
-  color: blueviolet
-}
-Header {
- background-color: rgb(0, 0, 0);
- color: blueviolet;
- padding: 80px;
- text-align: center;
-}
-
+        font-size: 40px;
+        color: blueviolet;
+        margin: 0 10px;
+        transition: 0.3s;
+      }
+      a i:hover {
+        color: #C13584;
+      }
+      .card {
+        background-color: #1a1a1a;
+        color: white;
+        border: none;
+      }
+      .btn-primary {
+        background: linear-gradient(to right, blueviolet, purple);
+        border: none;
+      }
+      .btn-primary:hover {
+        background: linear-gradient(to right, purple, blueviolet);
+      }
+      .whatsapp-float {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        bottom: 30px;
+        right: 30px;
+        background-color: #25d366;
+        color: white;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 30px;
+        z-index: 100;
+        box-shadow: 2px 2px 3px #999;
+      }
+      .whatsapp-float i {
+        margin-top: 16px;
+      }
     </style>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  </head>
+
+  <body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow">
       <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand text-dark" href="index.html">
+          <img src="logo redondo.png" style="max-width: 60px;"> BRAVVO
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
-          </button>
-          <a class="navbar-brand" href="Index.html"><img src="logo redondo.png" style="max-width: 63px; max-height: 63px; ;">BRAVVO</a>
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="loja.html" role="button" aria-expanded="false">Loja e Produtos</a>
+              <a class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown" href="#">Loja e Produtos</a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="camiseta.html">Camisetas</a></li>
-                <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="calça.html">Calças</a></li>
-                <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="moletons.html">Moletons</a></li>
-                <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="acessórios.html">Acessórios</a></li>
               </ul>
             </li>
-              <li class="nav-item">
-              <a class="nav-link" href="sobre.html">Sobre Nós</a>
-              </li>
-              <li class="nav-item">
-              <a class="nav-link" href="blog.html">Blog/Conteúdos</a>
-              </li>
-              <li class="nav-item">
-              <a class="nav-link" href="contato.html">Contato</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="politica.html">Política de Privacidade</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="carrinho.html">
-                        🛍️ Sacola (<span id="contador-carrinho">0</span>)
-                    </a>
-                </li>
+            <li class="nav-item"><a class="nav-link text-dark" href="sobre.html">Sobre Nós</a></li>
+            <li class="nav-item"><a class="nav-link text-dark" href="blog.html">Blog/Conteúdos</a></li>
+            <li class="nav-item"><a class="nav-link text-dark active" href="contato.html">Contato</a></li>
+            <li class="nav-item"><a class="nav-link text-dark" href="politica.html">Política de Privacidade</a></li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="carrinho.html">
+                🛍️ Sacola (<span id="contador-carrinho">0</span>)
+              </a>
+            </li>
           </ul>
-          <form class="d-flex"> BRAVVO 
-
-            <div vw class="enabled">
-              <div vw-access-button class="active"></div>
-              <div vw-plugin-wrapper>
-                <div class="vw-plugin-top-wrapper"></div>
-              </div>
-            </div>
-            <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-            <script>
-              new window.VLibras.Widget('https://vlibras.gov.br/app');
-            </script>
-               
-            </form>
-          </div>
+        </div>
       </div>
-      </nav>
-      <h1>Fale com a BRAVVO</h1>
-      <h3>Se você tem dúvidas, sugestões ou quer falar com nosso time, estamos prontos para te atender!</h3>
-      <p>Preencha o formulário abaixo e entraremos em contato o mais breve possível.</p>
-     
-    
-      <form action="salvar.php" method="post" enctype="multipart/form-data">
-
-        <label for="nome" >Digite seu Nome:</label>
-          <input type="text"  placeholder="Nome" id="nome"  class="form-control">
-          <label for="data_nascimento"> Data de Nascimento:</label>
-          <input type="date" id="data_nascimento" class="form-control">
-          <label for="email">Digite seu E-mail:</label>
-          <input type="email"  placeholder="E-mail" id="email" class="form-control">
-          <label for="telefone">Digite seu Telefone:</label>
-          <input type="tel"  placeholder="Telefone" id="telefone" class="form-control">
-          <label for="mensagem">Digite sua Mensagem:</label>
-          <textarea id="mensagem" class="form-control" placeholder="Mensagem"></textarea>
-          </br>
-          <button type="submit" class="btn btn-primary">Enviar</button>
-          <button type="reset" class="btn btn-secondary">Limpar</button>
-      </form>
- 
-      <br></br>
-      <header>
-        <h1 style="text-align: center;">Fique de olho em nossas redes sociais!</h1>
-        <div class="social-icons">
-          <a href="https://instagram.com/sualoja" target="_blank">
-            <i class="fab fa-instagram"></i>
-          </a>
-        
-          <a href="https://www.tiktok.com/@sualoja" target="_blank">
-            <i class="fab fa-tiktok"></i>
-          </a>
-        
-          <a href="https://pinterest.com/sualoja" target="_blank">
-            <i class="fab fa-pinterest"></i>
-          </a>
-        </div>        
-        
-  
-        </header>
+    </nav>
     
 
-     <footer style="background-color: #000000; color: rgb(255, 255, 255); text-align: center; padding: 20px; ">
-        &copy; BRAVVO. Todos os direitos reservados.
-      </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <!-- Cabeçalho -->
+    <header>
+      <h1>Fale com a <strong>BRAVVO</strong></h1>
+      <p>Tem dúvidas, sugestões ou quer falar com nosso time? Estamos prontos para te atender!</p>
+    </header>
 
+    <!-- Formulário -->
+    <div class="container my-5">
+      <div class="card shadow-lg p-4 rounded">
+        <h2 class="text-center mb-4">Entre em Contato</h2>
+        <form action="salvar.php" method="post">
+          <div class="mb-3">
+            <label for="nome" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="nome" name="nome" placeholder="Seu nome" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">E-mail</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+          </div>
+          <div class="mb-3">
+            <label for="telefone" class="form-label">Telefone</label>
+            <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX">
+          </div>
+          <div class="mb-3">
+            <label for="mensagem" class="form-label">Mensagem</label>
+            <textarea class="form-control" id="mensagem" name="mensagem" rows="5" placeholder="Digite sua mensagem aqui" required></textarea>
+          </div>
+          <div class="d-flex justify-content-center gap-3">
+            <button type="submit" class="btn btn-primary">Enviar</button>
+            <button type="reset" class="btn btn-secondary">Limpar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Redes Sociais -->
+    <div class="text-center mb-5">
+      <h4>Nos acompanhe nas redes sociais!</h4>
+      <a href="https://instagram.com/sualoja" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://tiktok.com/@sualoja" target="_blank"><i class="fab fa-tiktok"></i></a>
+      <a href="https://pinterest.com/sualoja" target="_blank"><i class="fab fa-pinterest"></i></a>
+    </div>
+
+    <!-- Botão WhatsApp -->
+    <a href="https://wa.me/seunumerowhatsapp" class="whatsapp-float" target="_blank">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer style="background-color: #000; color: white; text-align: center; padding: 20px;">
+      &copy; 2025 BRAVVO. Todos os direitos reservados.
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
     <script>
       function atualizarContadorCarrinho() {
-          const itensNoCarrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
-          document.getElementById('contador-carrinho').textContent = itensNoCarrinho.length;
+        const itensNoCarrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+        document.getElementById('contador-carrinho').textContent = itensNoCarrinho.length;
       }
-  
       atualizarContadorCarrinho();
-  </script>
+    </script>
   </body>
 </html>
