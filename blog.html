@@ -43,6 +43,11 @@
               <li class="nav-item">
                   <a class="nav-link" href="politica.html">Política de Privacidade</a>
                   </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="carrinho.html">
+                        🛍️ Sacola (<span id="contador-carrinho">0</span>)
+                    </a>
+                </li>
           </ul>
           <form class="d-flex" > BRAVVO
                
@@ -80,22 +85,23 @@
   <p>O streetwear nunca para de se reinventar. Se você vive o corre da rua e gosta de andar sempre no drip, se liga nas tendências que tão dominando as quebradas, os rolês e as timelines em 2025.</p>
 
   <h2>1. Oversized ainda reina</h2>
-  <img src="post 1.jpg" alt="Tendência Oversized" style="width: 740px; height: 500px; margin-left:380px ;">
+  <img src="post 1.jpg" alt="Tendência Oversized" style="width: 500px; height: 500px; margin-left:510px ;">
   <p>Camisetas largas, moletons amplos e calças folgadas seguem no topo. Além do conforto, o estilo entrega presença e atitude. O oversized é mais que moda, é identidade de quem vive o corre.</p>
 
   <h2>2. Cargo é o novo básico</h2>
-  <img src="post 2.jpg" alt="Tendência Calças Cargo" style="width: 740px; height: 600px; margin-left:380px ;">
+  <img src="post 2.jpg" alt="Tendência Calças Cargo" style="width: 500px; height: 500px; margin-left:510px ;">
   <p>Se não tem bolso, não tem graça. As calças cargo tão mais vivas que nunca — seja em sarja, jeans ou nylon. Versáteis, estilosas e funcionais, elas são peça obrigatória no guarda-roupa street.</p>
 
   <h2>3. Paleta neutra, com pontos de cor</h2>
-  <img src="post 3.jpg" alt="Tendência Paleta Neutra" style="width: 740px; height: 600px; margin-left:380px ;">
+  <img src="post 3.jpg" alt="Tendência Paleta Neutra" style="width: 500px; height: 500px; margin-left:510px ;">
   <p>O preto, branco, bege e cinza são base. Mas um splash de vermelho, verde neon ou azul royal faz o look gritar. A ideia é manter a base sólida e jogar uma peça chave que chame atenção.</p>
 
   <h2>4. Estampas e logos bold</h2>
-  <img src="post4.jpg"
+  <img src="post4.jpg" alt="Tendência Estampas Bold" style="width: 500px; height: 500px; margin-left:510px ;">
   <p>A galera quer mostrar de onde veio. Logos grandes, frases de impacto e estampas autorais fazem parte do corre. É sobre vestir o que você acredita e deixar sua marca por onde passa.</p>
 
   <h2>5. Acessórios pesados</h2>
+  <img src="post 5.jpg" alt="Tendência Acessórios Pesados" style="width: 500px; height: 500px; margin-left:510px ;">
   <p>Boné, shoulder bag, correntes, anéis e óculos futuristas são mais que detalhe — são parte do kit. No streetwear, os acessórios carregam tanto peso quanto a roupa.</p>
 
   <p>🚀 <strong>Quer esse drip no seu corre? Cola nos lançamentos da <a href="Index.html">BRAVVO</a> e garanta seu fit.</strong></p>
@@ -107,5 +113,14 @@
         &copy; BRAVVO. Todos os direitos reservados.
       </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+
+    <script>
+      function atualizarContadorCarrinho() {
+          const itensNoCarrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+          document.getElementById('contador-carrinho').textContent = itensNoCarrinho.length;
+      }
+  
+      atualizarContadorCarrinho();
+  </script>
   </body>
 </html>

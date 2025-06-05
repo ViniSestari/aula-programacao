@@ -9,6 +9,12 @@
 </head>
 
 <body>
+  <style>
+    .card-text{
+      color: black;
+    }
+  
+  </style>
 
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
@@ -42,6 +48,11 @@
                 <li class="nav-item">
                     <a class="nav-link" href="politica.html">Política de Privacidade</a>
                     </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="carrinho.html">
+                          🛍️ Sacola (<span id="contador-carrinho">0</span>)
+                      </a>
+                  </li>
             </ul>
             <form class="d-flex" > BRAVVO
                
@@ -66,81 +77,97 @@
     <div class="container py-5">
         <div class="row g-4">
     
-          <!-- Produto 1 -->
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="card h-100">
-              <img src="bone.webp" style= "height: 400px"; class="card-img-top" alt="Boné Preto BawClothing">
-              <div class="card-body">
-                <h5 class="card-title">Boné Preto Bawclothing</h5>
-                <p class="card-text">R$59,90</p>
-                <a href="carrinho.html" class="btn btn-primary" style="background-color:whitesmoke; color: black;">Adicionar produto à sacola</a>
-              </div>
-            </div>
-          </div>
-    
-          <!-- Produto 2 -->
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="card h-100">
-              <img src="bone 2.webp" style= "height: 400px"; class="card-img-top" alt="Boné">
-              <div class="card-body">
-                <h5 class="card-title">Boné Branco com Preto STR</h5>
-                <p class="card-text">R$59,90</p>
-                <a href="carrinho.html" class="btn btn-primary" style="background-color:whitesmoke; color: black;">Adicionar produto à sacola</a>
-              </div>
-            </div>
-          </div>
-    
-          <!-- Produto 3 -->
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="card h-100">
-              <img src="shoulder bag.jpg" style= "height: 400px" class="card-img-top" alt="ShoulderBag">
-              <div class="card-body">
-                <h5 class="card-title">Shoulder Bag Preta Nike</h5>
-                <p class="card-text">R$79,90</p>
-                <a href="carrinho.html" class="btn btn-primary" style="background-color:whitesmoke; color: black;">Adicionar produto à sacola</a>
-              </div>
-            </div>
-          </div>
-    
-          <!-- Produto 4 -->
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="card h-100">
-              <img src="bolsa.jpg" style="height: 400px" class="card-img-top" alt="Calça">
-              <div class="card-body">
-                <h5 class="card-title">Shoulder Bag Feminina Roxy</h5>
-                <p class="card-text">R$89,90</p>
-                <a href="carrinho.html" class="btn btn-primary" style="background-color:whitesmoke; color: black;">Adicionar produto à sacola</a>
-              </div>
-            </div>
-          </div>
+        <!-- Produto 1 -->
+<div class="col-sm-6 col-md-4 col-lg-3">
+  <div class="card h-100">
+    <img src="bone.webp" style="height: 400px;" class="card-img-top" alt="Boné Preto BawClothing">
+    <div class="card-body">
+      <h5 class="card-title">Boné Preto Bawclothing</h5>
+      <p class="card-text">R$59,90</p>
+      <button onclick="adicionarCarrinho('Boné Preto Bawclothing', 59.90, 'bone.webp')" class="btn btn-primary" style="background-color:whitesmoke; color: black;">Adicionar à sacola</button>
+    </div>
+  </div>
+</div>
 
-           <!-- Produto 5 -->
-           <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="card h-100">
-              <img src="meia.webp" style="height: 400px" class="card-img-top" alt="Calça">
-              <div class="card-body">
-                <h5 class="card-title">Meia cinza Snoopy maromba</h5>
-                <p class="card-text">R$19,90</p>
-                <a href="carrinho.html" class="btn btn-primary" style="background-color:whitesmoke; color: black;">Adicionar produto à sacola</a>
-              </div>
-            </div>
-          </div>
+<!-- Produto 2 -->
+<div class="col-sm-6 col-md-4 col-lg-3">
+  <div class="card h-100">
+    <img src="bone 2.webp" style="height: 400px;" class="card-img-top" alt="Boné">
+    <div class="card-body">
+      <h5 class="card-title">Boné Branco com Preto STR</h5>
+      <p class="card-text">R$59,90</p>
+      <button onclick="adicionarCarrinho('Boné Branco com Preto STR', 59.90, 'bone 2.webp')" class="btn btn-primary" style="background-color:whitesmoke; color: black;">Adicionar à sacola</button>
+    </div>
+  </div>
+</div>
 
-           <!-- Produto 6 -->
-           <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="card h-100">
-              <img src="bone 3.webp" style="height: 400px" class="card-img-top" alt="Calça">
-              <div class="card-body">
-                <h5 class="card-title">Boné lilás splash</h5>
-                <p class="card-text">R$39,90</p>
-                <a href="carrinho.html" class="btn btn-primary" style="background-color:whitesmoke; color: black;">Adicionar produto à sacola</a>
-              </div>
-            </div>
-          </div>
+<!-- Produto 3 -->
+<div class="col-sm-6 col-md-4 col-lg-3">
+  <div class="card h-100">
+    <img src="shoulder bag.jpg" style="height: 400px;" class="card-img-top" alt="ShoulderBag">
+    <div class="card-body">
+      <h5 class="card-title">Shoulder Bag Preta Nike</h5>
+      <p class="card-text">R$79,90</p>
+      <button onclick="adicionarCarrinho('Shoulder Bag Preta Nike', 79.90, 'shoulder bag.jpg')" class="btn btn-primary" style="background-color:whitesmoke; color: black;">Adicionar à sacola</button>
+    </div>
+  </div>
+</div>
+
+<!-- Produto 4 -->
+<div class="col-sm-6 col-md-4 col-lg-3">
+  <div class="card h-100">
+    <img src="bolsa.jpg" style="height: 400px;" class="card-img-top" alt="Shoulder Bag Feminina Roxy">
+    <div class="card-body">
+      <h5 class="card-title">Shoulder Bag Feminina Roxy</h5>
+      <p class="card-text">R$89,90</p>
+      <button onclick="adicionarCarrinho('Shoulder Bag Feminina Roxy', 89.90, 'bolsa.jpg')" class="btn btn-primary" style="background-color:whitesmoke; color: black;">Adicionar à sacola</button>
+    </div>
+  </div>
+</div>
+
+<!-- Produto 5 -->
+<div class="col-sm-6 col-md-4 col-lg-3">
+  <div class="card h-100">
+    <img src="meia.webp" style="height: 400px;" class="card-img-top" alt="Meia">
+    <div class="card-body">
+      <h5 class="card-title">Meia cinza Snoopy maromba</h5>
+      <p class="card-text">R$19,90</p>
+      <button onclick="adicionarCarrinho('Meia cinza Snoopy maromba', 19.90, 'meia.webp')" class="btn btn-primary" style="background-color:whitesmoke; color: black;">Adicionar à sacola</button>
+    </div>
+  </div>
+</div>
+
+<!-- Produto 6 -->
+<div class="col-sm-6 col-md-4 col-lg-3">
+  <div class="card h-100">
+    <img src="bone 3.webp" style="height: 400px;" class="card-img-top" alt="Boné Lilás Splash">
+    <div class="card-body">
+      <h5 class="card-title">Boné Lilás Splash</h5>
+      <p class="card-text">R$39,90</p>
+      <button onclick="adicionarCarrinho('Boné Lilás Splash', 39.90, 'bone 3.webp')" class="btn btn-primary" style="background-color:whitesmoke; color: black;">Adicionar à sacola</button>
+    </div>
+  </div>
+</div>
+
          
         </div>
       </div>
 
+      <script>
+        function adicionarCarrinho(nome, preco, imagem) {
+            const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+            const itemExistente = carrinho.find(item => item.nome === nome);
+        
+            if(itemExistente) {
+                itemExistente.quantidade += 1;
+            } else {
+                carrinho.push({ nome, preco, imagem, quantidade: 1 });
+            }
+        
+            localStorage.setItem('carrinho', JSON.stringify(carrinho));
+            alert('Produto adicionado à sacola!');
+        }
+        </script>
   
    <footer>
     &copy; BRAVVO. Todos os direitos reservados.
@@ -148,5 +175,14 @@
   
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+
+    <script>
+      function atualizarContadorCarrinho() {
+          const itensNoCarrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+          document.getElementById('contador-carrinho').textContent = itensNoCarrinho.length;
+      }
+  
+      atualizarContadorCarrinho();
+  </script>
 </body>
 </html>

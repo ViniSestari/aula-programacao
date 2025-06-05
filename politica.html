@@ -7,7 +7,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
   </head>
     <body>
-
+<style>
+body{
+  background-color: black;
+  color: rgb(255, 255, 255)
+}
+</style>
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,6 +45,11 @@
                 <li class="nav-item">
                     <a class="nav-link" href="politica.html">Política de Privacidade</a>
                     </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="carrinho.html">
+                          🛍️ Sacola (<span id="contador-carrinho">0</span>)
+                      </a>
+                  </li>
             </ul>
             <form class="d-flex" > BRAVVO
                
@@ -94,10 +104,21 @@
         <p>Podemos atualizar esta política de privacidade periodicamente. Sempre que uma atualização for realizada, a data de modificação será indicada no final deste documento. Recomendamos que você revise esta política regularmente.</p>
       
         <p><strong>Última atualização:</strong> 02/06/2025</p>
+
+
      <!-- Rodapé -->
-     <footer style="background-color: #ffffff; color: rgb(0, 0, 0); text-align: center; padding: 20px; margin-top: 30px;">
+     <footer style="background-color: #000000; color: rgb(255, 255, 255); text-align: center; padding: 20px; margin-top: 30px;">
         &copy; BRAVVO. Todos os direitos reservados.
       </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+
+    <script>
+      function atualizarContadorCarrinho() {
+          const itensNoCarrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+          document.getElementById('contador-carrinho').textContent = itensNoCarrinho.length;
+      }
+  
+      atualizarContadorCarrinho();
+  </script>
   </body>
 </html>

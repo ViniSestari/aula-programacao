@@ -9,6 +9,11 @@
   </head>
 
 <body >
+  <style>
+    .card-text{
+      color: black;
+    }
+  </style>
 
    <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
@@ -42,6 +47,11 @@
                 <li class="nav-item">
                     <a class="nav-link" href="politica.html">Política de Privacidade</a>
                     </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="carrinho.html">
+                          🛍️ Sacola (<span id="contador-carrinho">0</span>)
+                      </a>
+                  </li>
             </ul>
             <form class="d-flex" > BRAVVO
                
@@ -66,73 +76,74 @@
     <div class="container py-5">
        <div class="row g-4">
    
-         <!-- Produto 1 -->
-         <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="card h-100">
-             <img src="calça cargo.png" style= "height: 400px"; class="card-img-top" alt="Calça Cargo">
-             <div class="card-body">
-               <h5 class="card-title">Calça cargo Azul Marinha</h5>
-               <p class="card-text">R$199,90</p>
-               <a href="carrinho.html" class="btn btn-primary" style="background-color:whitesmoke; color: black;">Adicionar produto à sacola</a>
-             </div>
-           </div>
-         </div>
-   
-         <!-- Produto 2 -->
-         <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="card h-100">
-             <img src="calça 2.webp" style= "height: 400px"; class="card-img-top" alt="Calça">
-             <div class="card-body">
-               <h5 class="card-title">Calça jeans preta baggy cargo</h5>
-               <p class="card-text">R$229,90</p>
-               <a href="carrinho.html" class="btn btn-primary" style="background-color:whitesmoke; color: black;">Adicionar produto à sacola</a>
-             </div>
-           </div>
-         </div>   
-         <!-- Produto 3 -->
-         <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="card h-100">
-             <img src="calça 3.webp" style= "height: 400px" class="card-img-top" alt="Calça">
-             <div class="card-body">
-               <h5 class="card-title">Calça jeans reta com desenhos</h5>
-               <p class="card-text">R$219,90</p>
-               <a href="carrinho.html" class="btn btn-primary" style="background-color:whitesmoke; color: black;">Adicionar produto à sacola</a>
-             </div>
-           </div>
-         </div>
-   
-         <!-- Produto 4 -->
-         <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="card h-100">
-             <img src="calça 4.webp" style="height: 400px" class="card-img-top" alt="Calça">
-             <div class="card-body">
-               <h5 class="card-title">Calça jeans baggy bolsos cargo</h5>
-               <p class="card-text">R$229,90</p>
-               <a href="carrinho.html" class="btn btn-primary" style="background-color:whitesmoke; color: black;">Adicionar produto à sacola</a>
-             </div>
-           </div>
-         </div>
-        
-        <!-- Produto 5 -->
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="card h-100">
-            <img src="calça 5.webp" style= "height: 400px"; class="card-img-top" alt="Calça Cargo">
-            <div class="card-body">
-              <h5 class="card-title">Calça cargo Azul Marinha</h5>
-              <p class="card-text">R$199,90</p>
-              <a href="carrinho.html" class="btn btn-primary" style="background-color:whitesmoke; color: black;">Adicionar produto à sacola</a>
-            </div>
-          </div>
-        </div>
+        <!-- Produto 1 -->
+<div class="col-sm-6 col-md-4 col-lg-3">
+  <div class="card h-100">
+    <img src="calça cargo.png" style="height: 400px;" class="card-img-top" alt="Calça Cargo">
+    <div class="card-body">
+      <h5 class="card-title">Calça cargo Azul Marinha</h5>
+      <p class="card-text">R$199,90</p>
+      <button onclick="adicionarCarrinho('Calça cargo Azul Marinha', 199.90, 'calça cargo.png')" class="btn btn-primary" style="background-color:whitesmoke; color: black;">Adicionar à sacola</button>
+    </div>
+  </div>
+</div>
+
+<!-- Produto 2 -->
+<div class="col-sm-6 col-md-4 col-lg-3">
+  <div class="card h-100">
+    <img src="calça 2.webp" style="height: 400px;" class="card-img-top" alt="Calça jeans preta baggy cargo">
+    <div class="card-body">
+      <h5 class="card-title">Calça jeans preta baggy cargo</h5>
+      <p class="card-text">R$229,90</p>
+      <button onclick="adicionarCarrinho('Calça jeans preta baggy cargo', 229.90, 'calça 2.webp')" class="btn btn-primary" style="background-color:whitesmoke; color: black;">Adicionar à sacola</button>
+    </div>
+  </div>
+</div>
+
+<!-- Produto 3 -->
+<div class="col-sm-6 col-md-4 col-lg-3">
+  <div class="card h-100">
+    <img src="calça 3.webp" style="height: 400px;" class="card-img-top" alt="Calça jeans reta com desenhos">
+    <div class="card-body">
+      <h5 class="card-title">Calça jeans reta com desenhos</h5>
+      <p class="card-text">R$219,90</p>
+      <button onclick="adicionarCarrinho('Calça jeans reta com desenhos', 219.90, 'calça 3.webp')" class="btn btn-primary" style="background-color:whitesmoke; color: black;">Adicionar à sacola</button>
+    </div>
+  </div>
+</div>
+
+<!-- Produto 4 -->
+<div class="col-sm-6 col-md-4 col-lg-3">
+  <div class="card h-100">
+    <img src="calça 4.webp" style="height: 400px;" class="card-img-top" alt="Calça jeans baggy bolsos cargo">
+    <div class="card-body">
+      <h5 class="card-title">Calça jeans baggy bolsos cargo</h5>
+      <p class="card-text">R$229,90</p>
+      <button onclick="adicionarCarrinho('Calça jeans baggy bolsos cargo', 229.90, 'calça 4.webp')" class="btn btn-primary" style="background-color:whitesmoke; color: black;">Adicionar à sacola</button>
+    </div>
+  </div>
+</div>
+
+<!-- Produto 5 -->
+<div class="col-sm-6 col-md-4 col-lg-3">
+  <div class="card h-100">
+    <img src="calça 5.webp" style="height: 400px;" class="card-img-top" alt="Calça jogger Cinza Esfumaçado">
+    <div class="card-body">
+      <h5 class="card-title">Calça jogger Cinza Esfumaçado</h5>
+      <p class="card-text">R$219,90</p>
+      <button onclick="adicionarCarrinho('Calça jogger Cinza Esfumaçado', 219.90, 'calça 5.webp')" class="btn btn-primary" style="background-color:whitesmoke; color: black;">Adicionar à sacola</button>
+    </div>
+  </div>
+</div>
 
 <!-- Produto 6 -->
 <div class="col-sm-6 col-md-4 col-lg-3">
   <div class="card h-100">
-    <img src="calça 6.webp" style= "height: 400px"; class="card-img-top" alt="Calça Cargo">
+    <img src="calça 6.webp" style="height: 400px;" class="card-img-top" alt="Calça cargo Bege">
     <div class="card-body">
-      <h5 class="card-title">Calça cargo Azul Marinha</h5>
-      <p class="card-text">R$199,90</p>
-      <a href="carrinho.html" class="btn btn-primary" style="background-color:whitesmoke; color: black;">Adicionar produto à sacola</a>
+      <h5 class="card-title">Calça cargo Bege</h5>
+      <p class="card-text">R$189,90</p>
+      <button onclick="adicionarCarrinho('Calça cargo Bege', 189.90, 'calça 6.webp')" class="btn btn-primary" style="background-color:whitesmoke; color: black;">Adicionar à sacola</button>
     </div>
   </div>
 </div>
@@ -140,11 +151,11 @@
 <!-- Produto 7 -->
 <div class="col-sm-6 col-md-4 col-lg-3">
   <div class="card h-100">
-    <img src="calça 7.webp" style= "height: 400px"; class="card-img-top" alt="Calça Cargo">
+    <img src="calça 7.webp" style="height: 400px;" class="card-img-top" alt="Calça jogger Preta streetwear">
     <div class="card-body">
-      <h5 class="card-title">Calça cargo Azul Marinha</h5>
-      <p class="card-text">R$199,90</p>
-      <a href="carrinho.html" class="btn btn-primary" style="background-color:whitesmoke; color: black;">Adicionar produto à sacola</a>
+      <h5 class="card-title">Calça jogger Preta streetwear</h5>
+      <p class="card-text">R$229,90</p>
+      <button onclick="adicionarCarrinho('Calça jogger Preta streetwear', 229.90, 'calça 7.webp')" class="btn btn-primary" style="background-color:whitesmoke; color: black;">Adicionar à sacola</button>
     </div>
   </div>
 </div>
@@ -152,18 +163,35 @@
 <!-- Produto 8 -->
 <div class="col-sm-6 col-md-4 col-lg-3">
   <div class="card h-100">
-    <img src="calça 8.jpg" style= "height: 400px"; class="card-img-top" alt="Calça Cargo">
+    <img src="calça 8.jpg" style="height: 400px;" class="card-img-top" alt="Calça jeans baggy cruz">
     <div class="card-body">
-      <h5 class="card-title">Calça cargo Azul Marinha</h5>
-      <p class="card-text">R$199,90</p>
-      <a href="carrinho.html" class="btn btn-primary" style="background-color:whitesmoke; color: black;">Adicionar produto à sacola</a>
+      <h5 class="card-title">Calça jeans baggy cruz</h5>
+      <p class="card-text">R$229,90</p>
+      <button onclick="adicionarCarrinho('Calça jeans baggy cruz', 229.90, 'calça 8.jpg')" class="btn btn-primary" style="background-color:whitesmoke; color: black;">Adicionar à sacola</button>
     </div>
   </div>
 </div>
 
 
+
        </div>
      </div>
+
+     <script>
+      function adicionarCarrinho(nome, preco, imagem) {
+          const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+          const itemExistente = carrinho.find(item => item.nome === nome);
+      
+          if(itemExistente) {
+              itemExistente.quantidade += 1;
+          } else {
+              carrinho.push({ nome, preco, imagem, quantidade: 1 });
+          }
+      
+          localStorage.setItem('carrinho', JSON.stringify(carrinho));
+          alert('Produto adicionado à sacola!');
+      }
+      </script>
 
       
  <footer>
@@ -171,5 +199,14 @@
 </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+
+    <script>
+      function atualizarContadorCarrinho() {
+          const itensNoCarrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+          document.getElementById('contador-carrinho').textContent = itensNoCarrinho.length;
+      }
+  
+      atualizarContadorCarrinho();
+  </script>
 </body>
 </html>

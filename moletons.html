@@ -11,6 +11,11 @@
   </head>
 
 <body>
+  <style>
+    .card-text{
+      color: black;
+    }
+  </style>
 
    <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
@@ -44,6 +49,11 @@
                 <li class="nav-item">
                     <a class="nav-link" href="politica.html">Política de Privacidade</a>
                     </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="carrinho.html">
+                          🛍️ Sacola (<span id="contador-carrinho">0</span>)
+                      </a>
+                  </li>
             </ul>
             <form class="d-flex" > BRAVVO
                
@@ -121,8 +131,8 @@
             <div class="card h-100">
               <img src="moletom 5.jpg" style= "height: 400px"; class="card-img-top" alt="Moletom">
               <div class="card-body">
-                <h5 class="card-title">Blusa Moletom Streetwear estilo grafite</h5>
-                <p class="card-text">R$239,90</p>
+                <h5 class="card-title">Blusa Moletom Azul marinho no money rosa</h5>
+                <p class="card-text">R$229,90</p>
                 <a href="carrinho.html" class="btn btn-primary" style="background-color:whitesmoke; color: black;">Adicionar produto à sacola</a>
               </div>
             </div>
@@ -133,8 +143,8 @@
             <div class="card h-100">
               <img src="moletom 6.png" style= "height: 400px"; class="card-img-top" alt="Moletom">
               <div class="card-body">
-                <h5 class="card-title">Blusa Moletom Streetwear estilo grafite</h5>
-                <p class="card-text">R$239,90</p>
+                <h5 class="card-title">Blusa Moletom Streetwear Roxa</h5>
+                <p class="card-text">R$199,90</p>
                 <a href="carrinho.html" class="btn btn-primary" style="background-color:whitesmoke; color: black;">Adicionar produto à sacola</a>
               </div>
             </div>
@@ -145,8 +155,8 @@
             <div class="card h-100">
               <img src="moletom 7.webp" style= "height: 400px"; class="card-img-top" alt="Moletom">
               <div class="card-body">
-                <h5 class="card-title">Blusa Moletom Streetwear estilo grafite</h5>
-                <p class="card-text">R$239,90</p>
+                <h5 class="card-title">Blusa Moletom Preta HIGH</h5>
+                <p class="card-text">R$259,90</p>
                 <a href="carrinho.html" class="btn btn-primary" style="background-color:whitesmoke; color: black;">Adicionar produto à sacola</a>
               </div>
             </div>
@@ -155,12 +165,36 @@
        </div>
      </div>
     
-        <!-- Rodapé -->
- <footer style="background-color:black; color: rgb(255, 255, 255); text-align: center; padding: 20px; margin-top: 30px;">
+     <script>
+      function adicionarCarrinho(nome, preco, imagem) {
+          const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+          const itemExistente = carrinho.find(item => item.nome === nome);
+      
+          if(itemExistente) {
+              itemExistente.quantidade += 1;
+          } else {
+              carrinho.push({ nome, preco, imagem, quantidade: 1 });
+          }
+      
+          localStorage.setItem('carrinho', JSON.stringify(carrinho));
+          alert('Produto adicionado à sacola!');
+      }
+      </script>
+
+ <footer>
   &copy; BRAVVO. Todos os direitos reservados.
 </footer>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+
+    <script>
+      function atualizarContadorCarrinho() {
+          const itensNoCarrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+          document.getElementById('contador-carrinho').textContent = itensNoCarrinho.length;
+      }
+  
+      atualizarContadorCarrinho();
+  </script>
 </body>
 </html>

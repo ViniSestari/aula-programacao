@@ -42,6 +42,11 @@
                 <li class="nav-item">
                     <a class="nav-link" href="politica.html">Política de Privacidade</a>
                     </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="carrinho.html">
+                          🛍️ Sacola (<span id="contador-carrinho">0</span>)
+                      </a>
+                  </li>
             </ul>
             <form class="d-flex" > BRAVVO
                
@@ -117,5 +122,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
       crossorigin="anonymous"></script>
+
+      <script>
+        function atualizarContadorCarrinho() {
+            const itensNoCarrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+            document.getElementById('contador-carrinho').textContent = itensNoCarrinho.length;
+        }
+    
+        atualizarContadorCarrinho();
+    </script>
   </body>
 </html>
