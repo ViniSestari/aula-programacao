@@ -16,12 +16,20 @@ body {
 } 
 
 footer{
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 30px;
-}
+  
+    position: fixed;     /* fixa o footer na tela */
+    bottom: 0;           /* posiciona no rodapé */
+    left: 0;             /* começa na esquerda */
+    width: 100%;         /* ocupa a largura toda */
+    background-color: #000000;  /* seu fundo preto */
+    color: white;               /* cor do texto */
+    text-align: center;         /* centraliza o texto */
+    padding: 20px;              /* espaçamento interno */
+    z-index: 1000;              /* para ficar sobreposto */
+  }
+  
+    
+
 
 /*Alterar a classe*/
 .texto1{
@@ -59,17 +67,19 @@ p {
   color: blueviolet;
 }
 a i {
-    font-size: 70px;
-    color: blueviolet;
-    margin: 30px;
+  font-size: 40px;
+  color: blueviolet;
+  margin: 0 10px;
+  transition: 0.3s;
    
   }
   
   a i:hover {
     color: #C13584; 
   }
-  Header {
-    background-color: rgb(0, 0, 0);
+  header {
+    background-color: #000;
+    color: blueviolet;
     padding: 80px;
     text-align: center;
-   }
+  }

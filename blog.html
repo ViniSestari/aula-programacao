@@ -5,19 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Blog/Conteúdos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-  
     <link rel="stylesheet" href="estilo.css">
+    <style>
+      body {
+        background-color: black;
+        color: white;
+      }
+
+      .conteudo-centralizado {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .conteudo-centralizado img {
+        display: block;
+        margin: 20px auto;
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+      }
+    </style>
   </head>
- 
+
   <body>
- 
+
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
-          </button>
-          <a class="navbar-brand" href="Index.html"><img src="logo redondo.png" style="max-width: 63px; max-height: 63px; ;">BRAVVO</a>
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        </button>
+        <a class="navbar-brand" href="Index.html">BRAVVO</a>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="loja.html" role="button" aria-expanded="false">Loja e Produtos</a>
@@ -31,96 +51,75 @@
                 <li><a class="dropdown-item" href="acessórios.html">Acessórios</a></li>
               </ul>
             </li>
-              <li class="nav-item">
-              <a class="nav-link" href="sobre.html">Sobre Nós</a>
-              </li>
-              <li class="nav-item">
-              <a class="nav-link" href="blog.html">Blog/Conteúdos</a>
-              </li>
-              <li class="nav-item">
-              <a class="nav-link" href="contato.html">Contato</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="politica.html">Política de Privacidade</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="carrinho.html">
-                        🛍️ Sacola (<span id="contador-carrinho">0</span>)
-                    </a>
-                </li>
+            <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre Nós</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">Blog/Conteúdos</a></li>
+            <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+            <li class="nav-item"><a class="nav-link" href="politica.html">Política de Privacidade</a></li>
+            <li class="nav-item"><a class="nav-link" href="carrinho.html">🛍️ Sacola (<span id="contador-carrinho">0</span>)</a></li>
           </ul>
-          <form class="d-flex" > BRAVVO
-               
-          </form>
-          </div>
-      </div>
-      </nav>
-     
-      <div vw class="enabled">
-        <div vw-access-button class="active"></div>
-        <div vw-plugin-wrapper>
-          <div class="vw-plugin-top-wrapper"></div>
+          <form class="d-flex"> BRAVVO </form>
         </div>
       </div>
-      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-      <script>
-        new window.VLibras.Widget('https://vlibras.gov.br/app');
-      </script>
- 
-      <img src="grafite 1.jpg" class="rounded float-start" alt="grafite" style="width: 300px;height: 300px;">
-<img src="grafite 2.jpg" class="rounded float-end" alt="grafite" style="width: 300px; height: 300px;">
- 
+    </nav>
 
-<h1 class="blog"> Blog e Conteúdos</h1>
+    <!-- Acessibilidade VLibras -->
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
 
-<p class="texto1"> Bem vindo ao nosso blog! Aqui você encontrará uma variedade de conteúdos interessantes e informativos sobre moda, estilo e muito mais. Fique à vontade para explorar nossos artigos e dicas.</p>
+    <!-- Conteúdo centralizado -->
+    <div class="conteudo-centralizado">
+      <h1 class="blog">Blog e Conteúdos</h1>
 
-<section>
-<p id="texto2"> Se você está em busca de inspiração para o seu estilo, dicas de moda ou informações sobre as últimas tendências, você está no lugar certo! Navegue pelos nossos artigos e descubra tudo o que temos a oferecer.</p>
-</section>
+      <p class="texto1">Bem vindo ao nosso blog! Aqui você encontrará uma variedade de conteúdos interessantes e informativos sobre moda, estilo e muito mais. Fique à vontade para explorar nossos artigos e dicas.</p>
 
-<article>
-  <h1 class="blog">Tendências Streetwear Que Estão Dominando as Ruas em 2025</h1>
+      <section>
+        <p id="texto2">Se você está em busca de inspiração para o seu estilo, dicas de moda ou informações sobre as últimas tendências, você está no lugar certo! Navegue pelos nossos artigos e descubra tudo o que temos a oferecer.</p>
+      </section>
 
-  <p>O streetwear nunca para de se reinventar. Se você vive o corre da rua e gosta de andar sempre no drip, se liga nas tendências que tão dominando as quebradas, os rolês e as timelines em 2025.</p>
+      <article>
+        <h1 class="blog">Tendências Streetwear Que Estão Dominando as Ruas em 2025</h1>
 
-  <h2>1. Oversized ainda reina</h2>
-  <img src="post 1.jpg" alt="Tendência Oversized" style="width: 500px; height: 500px; margin-left:510px ;">
-  <p>Camisetas largas, moletons amplos e calças folgadas seguem no topo. Além do conforto, o estilo entrega presença e atitude. O oversized é mais que moda, é identidade de quem vive o corre.</p>
+        <p>O streetwear nunca para de se reinventar. Se você vive o corre da rua e gosta de andar sempre no drip, se liga nas tendências que tão dominando as quebradas, os rolês e as timelines em 2025.</p>
 
-  <h2>2. Cargo é o novo básico</h2>
-  <img src="post 2.jpg" alt="Tendência Calças Cargo" style="width: 500px; height: 500px; margin-left:510px ;">
-  <p>Se não tem bolso, não tem graça. As calças cargo tão mais vivas que nunca — seja em sarja, jeans ou nylon. Versáteis, estilosas e funcionais, elas são peça obrigatória no guarda-roupa street.</p>
+        <h2>1. Oversized ainda reina</h2>
+        <img src="post 1.jpg" alt="Tendência Oversized">
+        <p>Camisetas largas, moletons amplos e calças folgadas seguem no topo. Além do conforto, o estilo entrega presença e atitude. O oversized é mais que moda, é identidade de quem vive o corre.</p>
 
-  <h2>3. Paleta neutra, com pontos de cor</h2>
-  <img src="post 3.jpg" alt="Tendência Paleta Neutra" style="width: 500px; height: 500px; margin-left:510px ;">
-  <p>O preto, branco, bege e cinza são base. Mas um splash de vermelho, verde neon ou azul royal faz o look gritar. A ideia é manter a base sólida e jogar uma peça chave que chame atenção.</p>
+        <h2>2. Cargo é o novo básico</h2>
+        <img src="post 2.jpg" alt="Tendência Calças Cargo">
+        <p>Se não tem bolso, não tem graça. As calças cargo tão mais vivas que nunca — seja em sarja, jeans ou nylon. Versáteis, estilosas e funcionais, elas são peça obrigatória no guarda-roupa street.</p>
 
-  <h2>4. Estampas e logos bold</h2>
-  <img src="post4.jpg" alt="Tendência Estampas Bold" style="width: 500px; height: 500px; margin-left:510px ;">
-  <p>A galera quer mostrar de onde veio. Logos grandes, frases de impacto e estampas autorais fazem parte do corre. É sobre vestir o que você acredita e deixar sua marca por onde passa.</p>
+        <h2>3. Paleta neutra, com pontos de cor</h2>
+        <img src="post 3.jpg" alt="Tendência Paleta Neutra">
+        <p>O preto, branco, bege e cinza são base. Mas um splash de vermelho, verde neon ou azul royal faz o look gritar. A ideia é manter a base sólida e jogar uma peça chave que chame atenção.</p>
 
-  <h2>5. Acessórios pesados</h2>
-  <img src="post 5.jpg" alt="Tendência Acessórios Pesados" style="width: 500px; height: 500px; margin-left:510px ;">
-  <p>Boné, shoulder bag, correntes, anéis e óculos futuristas são mais que detalhe — são parte do kit. No streetwear, os acessórios carregam tanto peso quanto a roupa.</p>
+        <h2>4. Estampas e logos bold</h2>
+        <img src="post4.jpg" alt="Tendência Estampas Bold">
+        <p>A galera quer mostrar de onde veio. Logos grandes, frases de impacto e estampas autorais fazem parte do corre. É sobre vestir o que você acredita e deixar sua marca por onde passa.</p>
 
-  <p>🚀 <strong>Quer esse drip no seu corre? Cola nos lançamentos da <a href="Index.html">BRAVVO</a> e garanta seu fit.</strong></p>
-</article>
+        <h2>5. Acessórios pesados</h2>
+        <img src="post 5.jpg" alt="Tendência Acessórios Pesados">
+        <p>Boné, shoulder bag, correntes, anéis e óculos futuristas são mais que detalhe — são parte do kit. No streetwear, os acessórios carregam tanto peso quanto a roupa.</p>
 
- 
-    
-     <footer>
-        &copy; BRAVVO. Todos os direitos reservados.
-      </footer>
+        <p>🚀 <strong>Quer esse drip no seu corre? Cola nos lançamentos da <a href="Index.html">BRAVVO</a> e garanta seu fit.</strong></p>
+      </article>
+    </div>
+
+    <footer>
+      &copy; BRAVVO. Todos os direitos reservados.
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
-
     <script>
       function atualizarContadorCarrinho() {
-          const itensNoCarrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
-          document.getElementById('contador-carrinho').textContent = itensNoCarrinho.length;
+        const itensNoCarrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+        document.getElementById('contador-carrinho').textContent = itensNoCarrinho.length;
       }
-  
       atualizarContadorCarrinho();
-  </script>
+    </script>
   </body>
 </html>
